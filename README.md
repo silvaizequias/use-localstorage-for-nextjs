@@ -32,16 +32,12 @@ export default function useStorage({ action, key, value }: Props) {
     if (typeof localStorage !== 'undefined')
       switch (action) {
         case 'get':
-          console.log('caiu no GET')
           return localStorage.getItem(key)
         case 'remove':
-          console.log('caiu no REMOVE')
           return localStorage.removeItem(key)
         case 'set':
-          console.log('caiu no SET')
           return localStorage.setItem(key, value!)
         default:
-          console.log('caiu no ERRO')
           return undefined
       }
 
